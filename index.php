@@ -1,5 +1,5 @@
 <?Php require_once("inc/templates/header.php"); ?>
-<div class="container"style="background-image:URL(assets/images/Picture1.jpg) " >
+<div class="container">
     <div class="row">
         <div class="col-lg-12">
             <div style="margin-top: 100px; margin-bottom: 100px" class="text-center">

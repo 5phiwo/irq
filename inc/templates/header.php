@@ -3,7 +3,7 @@
         <title>IRQ</title>
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
     </head>
-    <body>
+    <body style="background-image: url(assets/images/Picture1.jpg)">
     <nav class="navbar navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
