@@ -14,13 +14,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a style="padding: 0px 15px;" class="navbar-brand" href="#"><img src="assets/images/unnamed.jpg" height="50px" width="50px"></a>
+                <a style="padding: 0px 20px;" class="navbar-brand" href="#"><img src="assets/images/unnamed.jpg" height="50px" width="60px"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="about.php">About</a></li>
+                <li class="active"><a href="index.php"> <strong>Home </strong> <span class="sr-only">(current)</span></a></li>
+                <li><a href="about.php"> <strong>About </strong></a></li>
                 <li class="dropdown">
                 <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -35,8 +35,8 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.php">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="login.php"> <strong>Login </strong></a></li>
+                <li><a href="register.php"> <strong>Register </strong></a></li>
                 <!-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu">
