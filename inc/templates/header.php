@@ -3,7 +3,7 @@
         <title>IRQ</title>
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
     </head>
-<body style="background-image: url(assets/images/Picture1.jpg); background-size: contain;">
+<body style="background-image: url(assets/images/Picture1.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
     <nav class="navbar navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,7 +16,7 @@
                 </button>
                 <a style="padding: 0px 20px;" class="navbar-brand" href="#"><img src="assets/images/unnamed.jpg" height="50px" width="60px"></a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Collect t*he nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php"> <strong>Home </strong> <span class="sr-only">(current)</span></a></li>
