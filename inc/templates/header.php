@@ -14,7 +14,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a style="padding: 0px 20px;" class="navbar-brand" href="#"><img src="assets/images/unnamed.jpg" height="50px" width="60px"></a>
+                <a style="padding: 0px 20px;" class="navbar-brand" href="#"><!--<img src="assets/images/unnamed.jpg" height="50px" width="60px">--></a>
             </div>
             <!-- Collect t*he nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
