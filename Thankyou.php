@@ -1,3 +1,6 @@
+<DOCTYPE html>
+<head>
+<body>
 <?Php require_once("inc/templates/header.php"); ?>
 <div class="container">
     <div class="row">

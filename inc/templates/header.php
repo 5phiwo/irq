@@ -3,7 +3,7 @@
         <title>IRQ</title>
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
     </head>
-<body style="background-image: url(assets/images/Picture1.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url(assets/images/Picture1.jpg); background-position:center; background-repeat: no-repeat; background-size: 1000px 500px;"</body>
     <nav class="navbar navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php"> <strong>Home </strong> <span class="sr-only">(current)</span></a></li>
-                <li><a href="about.php"> <strong>About </strong></a></li>
+                <li class="active"><a href="about.php"> <strong>About </strong><span class="sr-only">(current)</span></a></li>
                 <li class="dropdown">
                 <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu">

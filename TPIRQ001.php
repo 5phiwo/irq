@@ -1,3 +1,6 @@
+<DOCTYPE html>
+<head>
+<body>
 <?Php require_once("inc/templates/header.php"); ?>
 <div class="container">
     <div class="row">
@@ -9,24 +12,24 @@
         </div>
     </div>
     <div class="row">
-        <form action="" method="post">
+        <form action="insert_TPIRQ001.php" method="post">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
                     <div style="margin-top: 60px;" class="text-center">
                         <p>1. Please describe the product / service required from the third party</p>
-                        <textarea style="height: 100px;" class="form-control"></textarea>
+                        <textarea style="height: 100px;"  id="" class="form-control"></textarea>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 text-center">
                     <div style="margin-top:20px;">
-                        <input name="next" type="submit" value="Next" class="btn btn-primary">
-                        <a href="Questionaire2.php">.</a>
+                        <input name="TPIRQ001" type="submit" value="Next" class="btn btn-primary">
+                        <!-- <a href="Questionaire2.php">.</a> -->
                     </div>
                 </div>
             </div>
         </form>
-    </div>
+    </div>  
 </div>
 <?Php require_once("inc/templates/footer.php"); ?>

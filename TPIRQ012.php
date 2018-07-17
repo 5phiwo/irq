@@ -1,3 +1,6 @@
+<DOCTYPE html>
+<head>
+<body>
 <?Php require_once("inc/templates/header.php"); ?>
 <div class="container">
     <div class="row">
@@ -9,12 +12,12 @@
         </div>
     </div>
     <div class="row">
-        <form action="" method="post">
+        <form action="insert_TPIRQ012.php" method="post">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
                     <div style="margin-top: 60px;" class="text-center">
-                        <p>12. As part of the transaction, will the third party be acting in the following manner? </p>
-                            <p><select name="formGender">
+                    <p>12. As part of the transaction, will the third party be acting in the following manner? </p>
+                        <p><select id="myComboBox" class="form-control">
                                 <option value="">Select...</option>
                                 <option value="M">Influencing CLIENT’s revenue received from client-based engagement</option>
                                 <option value="M">Negotiating on behalf of CLIENT</option>
@@ -28,7 +31,6 @@
                                 <option value="M">Influencing CLIENT’s chances of winning work</option>
                                 <option value="M">None of the above</option>
                             </select></p>
-                       
                     </div>
                 </div>
             </div>
@@ -36,7 +38,9 @@
                 <div class="col-lg-6 col-lg-offset-3 text-center">
                     <div style="margin-top:80px;">
                         <input name="next" type="submit" value="Next" class="btn btn-primary">
-                        <a href="Questionnaire10.php">.</a>
+                        </br></br></br></br></br></br>
+                        <a href="http://localhost:8080/irq/TPIRQ001.php?restartSession=true">Re-start Questionnaire</a>
+                        <!-- <a href="Questionnaire4.php">.</a> -->
                     </div>
                 </div>
             </div>

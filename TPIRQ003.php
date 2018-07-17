@@ -1,3 +1,6 @@
+<DOCTYPE html>
+<head>
+<body>
 <?Php require_once("inc/templates/header.php"); ?>
 <div class="container">
     <div class="row">
@@ -9,18 +12,18 @@
         </div>
     </div>
     <div class="row">
-        <form action="" method="post">
+        <form action="insert_TPIRQ003.php" method="post">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
                     <div style="margin-top: 60px;" class="text-center">
                         <p>3. What is the Business unit/ function of the requester? </p>
-                            <p><select name="formGender">
-                                <option value="">Select...</option>
-                                <option value="M">Personal Business Banking</option>
-                                <option value="M">Corporate Investment Banking</option>
-                                <option value="M">Wealth</option>
-                                <option value="M">Procurement</option>
-                                <option value="M">Other</option>
+                            <p><select value="TPIRQ003" id="TPIRQ003" class="form-control">
+                                <option value="TPIRQ003">Select...</option>
+                                <option value="Personal Business Banking">Personal Business Banking</option>
+                                <option value="TPIRQ003">Corporate Investment Banking</option>
+                                <option value="TPIRQ003">Wealth</option>
+                                <option value="TPIRQ003">Procurement</option>
+                                <option value="TPIRQ003">Other</option>
                             </select></p>
                        
                     </div>
@@ -30,7 +33,9 @@
                 <div class="col-lg-6 col-lg-offset-3 text-center">
                     <div style="margin-top:80px;">
                         <input name="next" type="submit" value="Next" class="btn btn-primary">
-                        <a href="Questionnaire4.php">.</a>
+                        </br></br></br></br></br></br>
+                        <a href="http://localhost:8080/irq/TPIRQ001.php?restartSession=true">Re-start Questionnaire</a>
+                        <!-- <a href="Questionnaire4.php">.</a> -->
                     </div>
                 </div>
             </div>
