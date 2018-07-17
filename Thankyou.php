@@ -11,5 +11,4 @@
         </div>
     </div>
 </div>
-
 <?Php require_once("inc/templates/footer.php"); ?>
