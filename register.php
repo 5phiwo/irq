@@ -1,256 +1,33 @@
-<<<<<<< HEAD
-<DOCTYPE html>
-<head>
-<body>
-<?php
-
-// Include config file
-
-require_once 'config.php';
-require_once ("inc/templates/header.php");
-
- 
-
-// Define variables and initialize with empty values
-
-$username = $password = $confirm_password = "";
-
-$username_err = $password_err = $confirm_password_err = "";
-
- 
-
-// Processing form data when form is submitted
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    // Validate username
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter a username.";
-    } else{
-        // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE username = ?";
-        
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-
-            mysqli_stmt_bind_param($stmt, "s", $param_username);
-            
-
-            // Set parameters
-
-            $param_username = trim($_POST["username"]);
-            
-
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                /* store result */
-                mysqli_stmt_store_result($stmt);
-                
-                if(mysqli_stmt_num_rows($stmt) == 1){
-
-                    $username_err = "This username is already taken.";
-                } else{
-                   $username = trim($_POST["username"]);
-                }
-            } else{
-               echo "Oops! Something went wrong. Please try again later.";
-            }
-
-        }
-         
-        // Close statement
-
-        mysqli_stmt_close($stmt);
-
-    }
-
-    
-
-    // Validate password
-
-    if(empty(trim($_POST['password']))){
-
-       $password_err = "Please enter a password.";     
-
-    } elseif(strlen(trim($_POST['password'])) < 6){
-
-        $password_err = "Password must have atleast 6 characters.";
-
-    } else{
-
-        $password = trim($_POST['password']);
-
-    }
-
-    
-
-    // Validate confirm password
-
-    if(empty(trim($_POST["confirm_password"]))){
-
-        $confirm_password_err = 'Please confirm password.';     
-
-    } else{
-
-        $confirm_password = trim($_POST['confirm_password']);
-
-        if($password != $confirm_password){
-
-            $confirm_password_err = 'Password did not match.';
-
-        }
-
-    }
-
-    
-
-    // Check input errors before inserting in database
-
-    if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
-
-        
-
-        // Prepare an insert statement
-
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-
-         
-
-        if($stmt = mysqli_prepare($link, $sql)){
-
-            // Bind variables to the prepared statement as parameters
-
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
-
-            
-
-            // Set parameters
-
-            $param_username = $username;
-
-            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-
-            
-
-            // Attempt to execute the prepared statement
-
-            if(mysqli_stmt_execute($stmt)){
-
-                // Redirect to login page
-
-                header("location: login.php");
-
-            } else{
-
-                echo "Something went wrong. Please try again later.";
-
-            }
-
-        }
-
-         
-
-        // Close statement
-
-        mysqli_stmt_close($stmt);
-
-    }
-
-    
-
-    // Close connection
-
-    mysqli_close($link);
-
-}
-
+<?Php
+	require_once("inc/config/db.php");
+	
+	if(isset($_POST['reg_user']))
+	{
+		$title = $_POST['title'];
+		$fname = $_POST['fname'];
+		$lname = $_POST['lname'];
+		$email = $_POST['email'];
+		$function = $_POST['function'];
+		$role = $_POST['role'];
+		
+		$sql = "insert into user(title, first_name, last_name, email, business_function, role)
+				values('$title', '$fname', '$lname', '$email', '$role', '$function')";
+				
+		$query = mysql_query($sql) or die(mysql_error());
+		
+		if($query)
+		{
+			session_start();
+			$_SESSION['email'] = $email;
+			header('Location: question.php');
+		}
+		else
+		{
+			
+		}
+	}
 ?>
 
- 
-
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <title>Sign Up</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-
-    <style type="text/css">
-
-        body{ font: 14px sans-serif; }
-
-        .wrapper{ width: 350px; padding: 20px; }
-
-    </style>
-
-</head>
-
-<body>
-
-    <div class="col-lg-4 col-lg-offset-4"
-    <div class="text-center">
-
-        <br/><br/><br/>
-        <h2>Register</h2>
-
-       <p>Please fill this form to create an account</p>
-       <br/> <br/>
-
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-
-                <label>Username</label>
-
-                <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
-
-                <span class="help-block"><?php echo $username_err; ?></span>
-
-            </div>    
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-
-                <label>Password</label>
-
-                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-
-                <span class="help-block"><?php echo $password_err; ?></span>
-
-            </div>
-
-            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-
-                <label>Confirm Password</label>
-
-                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
-
-                <span class="help-block"><?php echo $confirm_password_err; ?></span>
-
-            </div>
-
-            <div class="form-group">
-
-                <input type="submit" class="btn btn-primary" value="Submit">
-
-                <input type="reset" class="btn btn-default" value="Reset">
-
-            </div>
-
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
-
-        </form>
-
-    </div>    
-
-</body>
-
-</html>
-
-=======
 <?Php require_once("inc/templates/header.php"); ?>
 <div class="container">
     <div class="row">
@@ -263,33 +40,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="row">
         <div class="col-lg-4 col-lg-offset-4">
             <div class="">
-                <form>
+                <form action="register.php" method="post">
+					<div class="form-group">
+                        <label>Title</label>
+                        <input type="text" name="title" class="form-control">
+                    </div>
                     <div class="form-group">
                         <label>First name</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="fname" class="form-control">
                     </div>
                     <div class="form-group">
 						<label>Last name</label>
-                        <input type="text" name="" class="form-control">
-                    </div>
-					<div class="form-group">
-						<label>Last name</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="lname" class="form-control">
                     </div>
 					<div class="form-group">
 						<label>Email</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="email" class="form-control">
                     </div>
 					<div class="form-group">
 						<label>Role</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="role" class="form-control">
                     </div>
 					<div class="form-group">
 						<label>Business function</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="function" class="form-control">
                     </div>
                     <div class="">
-                        <input type="submit" name="" value="Submit" class="btn btn-primary">
+                        <input type="submit" name="reg_user" value="Submit" class="btn btn-primary" />
                         <a href="questionaire.php"></a>
                     </div>
                 </form>
@@ -298,4 +75,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
 </div>
 <?Php require_once("inc/templates/footer.php"); ?>
->>>>>>> 8f63c3f6fb6b724f4a5a3b3336000be2f2ef6965
