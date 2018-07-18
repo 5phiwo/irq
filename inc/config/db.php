@@ -4,6 +4,6 @@
 	define("_db_pass", "");
 	define("_db_name", "questionaire");
 	
-	$conn = mysql_connect(_db_host, _db_user, _db_pass);
-	mysql_select_db(_db_name);
+	$conn = mysqli_connect(_db_host, _db_user, _db_pass);
+	mysqli_select_db($conn, _db_name);
 ?>
