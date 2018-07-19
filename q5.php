@@ -1,3 +1,6 @@
+<DOCTYPE html>
+<head>
+<body>
 <?Php
 	require_once("inc/config/db.php");
 	session_start();
@@ -26,10 +29,14 @@
 								<input type="text" name="est_duration" class="form-control">
 							</div>
 						</div>
-						<div class="col-lg-12">
+						<div class="col-lg-6 col-lg-offset-3 text-center">
+						<div style="margin-top:60px;">
 							<div class="grp-input">
-								<a href="q4.php" class="btn btn-primary">Previous</a>
-								<input type="submit" name="next" value="Next" class="btn btn-primary">
+							<input type="submit" name="next" value="Next" class="btn btn-primary">
+								</br> </br> </br> </br>
+								<a href="q4.php" >Previous</a>
+								</br></br></br></br>
+								<h6>Question 5 of 13</h6>
 							</div>
 						</div>
 					</form>

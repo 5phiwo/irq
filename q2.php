@@ -1,3 +1,6 @@
+<DOCTYPE html>
+<head>
+<body>
 <?Php
 	require_once("inc/config/db.php");
 	session_start();
@@ -12,7 +15,21 @@
 		header("Location: q3.php");
 	}
 ?>
+<DOCTYPE html>
+<head>
+<body>
 <?Php require_once("inc/templates/header.php"); ?>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="text-center">
+				<h3>Third Party Risk Management</h3>
+            	<h4>Inherent Risk Questionnaire</h4>
+			</div>
+		</div>
+	</div>
 	<div class="row">
 		<div style="margin-top: 100px; margin-bottom: 100px" class="text-center">
 			<div class="col-lg-6 col-lg-offset-3">
@@ -29,15 +46,15 @@
 									<option value="2">Building and Construction Machinery and Accessories</option>
 									<option value="3">Building and Facility Construction and Maintenance Services</option>
 									<option value="4">Chemicals including Bio Chemicals and Gas Materials</option>
-									<option value="4">Cleaning Equipment and Supplies</option>
-									<option value="">Commercial and Military and Private Vehicles and their Accessories and Components</option>
-									<option value="">Defense and Law Enforcement and Security and Safety Equipment and Supplies</option>
-									<option value="">Distribution and Conditioning Systems and Equipment and Components</option>
-									<option value="">Domestic Appliances and Supplies and Consumer Electronic Products</option>
-									<option value="">Drugs and Pharmaceutical Products</option>
-									<option value="">Editorial and Design and Graphic and Fine Art Services</option>
-									<option value="">Education and Training Services</option>
-									<option value="">Electrical Systems and Lighting and Components and Accessories and Supplies</option>
+									<option value="5">Cleaning Equipment and Supplies</option>
+									<option value="6">Commercial and Military and Private Vehicles and their Accessories and Components</option>
+									<option value="7">Defense and Law Enforcement and Security and Safety Equipment and Supplies</option>
+									<option value="8">Distribution and Conditioning Systems and Equipment and Components</option>
+									<option value="9">Domestic Appliances and Supplies and Consumer Electronic Products</option>
+									<option value="10">Drugs and Pharmaceutical Products</option>
+									<option value="11">Editorial and Design and Graphic and Fine Art Services</option>
+									<option value="12">Education and Training Services</option>
+									<option value="13">Electrical Systems and Lighting and Components and Accessories and Supplies</option>
 									<option>Electronic Components and Supplies</option>
 									<option>Engineering and Research and Technology Based Services</option>
 									<option>Environmental Services</option>
@@ -50,10 +67,14 @@
 								</select>
 							</div>
 						</div>
-						<div class="col-lg-12">
+						<div class="col-lg-6 col-lg-offset-3 text-center">
+						<div style="margin-top:60px;">
 							<div class="grp-input">
-								<a href="q1.php" class="btn btn-primary">Previous</a>
 								<input type="submit" name="next" value="Next" class="btn btn-primary">
+								</br> </br> </br> </br>
+								<a href="q1.php" >Previous</a>
+								</br></br></br></br>
+								<h6>Question 2 of 13</h6>
 							</div>
 						</div>
 					</form>
@@ -61,4 +82,5 @@
 			</div>
 		</div>
 	</div>
-<?Php require_once("inc/templates/header.php"); ?>
+</body>
+</html>
