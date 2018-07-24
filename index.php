@@ -1,3 +1,5 @@
+<DOCTYPE html>
+<head>
 <?Php
 	require_once("inc/config/db.php");
 	session_start();
@@ -26,7 +28,7 @@
 			}
 			else
 			{
-				$message = "Wrong email address.";
+				$message = "Please enter a validated e-mail address";
 			}
 		}
 	}

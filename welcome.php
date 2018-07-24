@@ -1,3 +1,6 @@
+<DOCTYPE html>
+<head>
+<body>
 <?Php
 	require_once("inc/config/db.php");
 	session_start();
@@ -33,34 +36,38 @@
 	}
 ?>
 <?Php require_once("inc/templates/header.php"); ?>
-	<div style="margin-top: 100px; margin-bottom: 100px">
-		<div class="col-lg-6 col-lg-offset-3">
+	<div style="margin-top: 50px; margin-bottom: 100px">
+		<div class="col-lg-6 col-lg-offset-5">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="row">
 						<div class="col-lg-12">
-							<h4>User Details</h4>
+							<h2>User Details</h2>
 						</div>
 					</div>
+					</br>
 					<div class="row">
-						<div class="col-lg-6">First name</div>
-						<div class="col-lg-6"><?Php echo $fname; ?></div>
+						<div class="col-lg-2"><label>First name:</label></div>
+						<div class="col-lg-2"><?Php echo $fname; ?></div>
 					</div>
 					<div class="row">
-						<div class="col-lg-6">Last name</div>
-						<div class="col-lg-6"><?Php echo $lname; ?></div>
+						<div class="col-lg-2"><label>Last name:</label></div>
+						<div class="col-lg-2"><?Php echo $lname; ?></div>
+					</div>
+					</br>
+					<div class="row">
+						<div class="col-lg-2"><label>Email:</label></div>
+						<div class="col-lg-2"><?Php echo $email; ?></div>
 					</div>
 					<div class="row">
-						<div class="col-lg-6">Email</div>
-						<div class="col-lg-6"><?Php echo $email; ?></div>
+						<div class="col-lg-2"><label>Role:</label></div>
+						<div class="col-lg-2"><?Php echo $role; ?></div>
 					</div>
-					<div class="row">
-						<div class="col-lg-6">Role</div>
-						<div class="col-lg-6"><?Php echo $role; ?></div>
-					</div>
+
+					</br></br></br>
 					<div class="row">
 						<div class="col-lg-12">
-							<a class="btn btn-primary" href="q1.php">Contineue</a>
+							<a class="btn btn-primary" href="q1.php">Continue</a>
 						</div>
 					</div>
 				</div>

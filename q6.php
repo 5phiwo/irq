@@ -26,7 +26,7 @@
 								<label>6. Will the provision of the goods / services by the third party meet the definition of a Critical and/or Material Outsourcing relationship?</label>
 							</div>
 							<div class="">
-								<select class="form-control">
+								<select name= "criticality"select class="form-control">
 									<option value="0">Select</option>
 									<option value="">Critical and/or material</option>
 									<option value="">None</option>

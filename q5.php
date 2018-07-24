@@ -14,6 +14,10 @@
 	{
 		header("Location: q6.php");
 	}
+	
+?>
+<?php
+
 ?>
 <?Php require_once("inc/templates/header.php"); ?>
 	<div class="row">

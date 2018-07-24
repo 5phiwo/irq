@@ -14,13 +14,23 @@
 	{
 		header("Location: q3.php");
 	}
+
+	if(empty($_POST['category']))
+{
+    $category_error = "Please select a cake size";
+    $error=true;
+}
+else
+{
+    $selected_cake = $_POST['selectedcake'];
+}
+	
 ?>
-<DOCTYPE html>
-<head>
-<body>
+<?php
+
+	
+?>
 <?Php require_once("inc/templates/header.php"); ?>
-</head>
-<body>
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
@@ -41,7 +51,7 @@
 							</div>
 							<div class="">
 								<select name="category" class="form-control">
-									<option value="0">Select category</option>
+									<option value="">Select category</option>
 									<option value="1">Apparel and Luggage and Personal Care Products</option>
 									<option value="2">Building and Construction Machinery and Accessories</option>
 									<option value="3">Building and Facility Construction and Maintenance Services</option>
@@ -71,9 +81,10 @@
 						<div style="margin-top:60px;">
 							<div class="grp-input">
 								<input type="submit" name="next" value="Next" class="btn btn-primary">
+								<div style="color: red;"><?Php if(isset($message)) echo $message; ?></div>
 								</br> </br> </br> </br>
 								<a href="q1.php" >Previous</a>
-								</br></br></br></br>
+								</br></br></br></br>	
 								<h6>Question 2 of 13</h6>
 							</div>
 						</div>

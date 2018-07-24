@@ -15,6 +15,9 @@
 		header("Location: q5.php");
 	}
 ?>
+<?php
+    // Page that adds records
+?>
 <?Php require_once("inc/templates/header.php"); ?>
 	<div class="row">
 		<div style="margin-top: 100px; margin-bottom: 100px" class="text-center">
