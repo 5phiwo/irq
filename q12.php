@@ -12,6 +12,7 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q12'] = $_POST['q12'];
 		header("Location: q13.php");
 	}
 ?>
@@ -26,7 +27,7 @@
 								<label>12. As part of the transaction, will the third party be acting in the following manner?</label>
 							</div>
 							<div class="">
-								<select class="form-control">
+								<select name="q12" class="form-control">
                                     <option>Select</option>
                                     <option value="">Influencing CLIENT’s revenue received from client-based engagement</option>
                                     <option value="">Negotiating on behalf of CLIENT</option>

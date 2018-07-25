@@ -12,6 +12,11 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q8'] = $_POST['q8'];
+		$_SESSION['answers']['q8']['sub']['q8a'] = $_POST['q8a'];
+		$_SESSION['answers']['q8']['sub']['q8b'] = $_POST['q8b'];
+		$_SESSION['answers']['q8']['sub']['q8c'] = $_POST['q8c'];
+		
 		header("Location: q9.php");
 	}
 ?>
@@ -90,20 +95,20 @@
 							</div>
 							</br>
 							<div class="">
-							<label> Yes <input id="i1" type="radio" name="name1" value="1"> </label>
-							<label> No <input id="i2" type="radio" name="name1" value="2"> </label>
+								<label> Yes <input id="i1" type="radio" name="q8" value="Yes"> </label>
+								<label> No 	<input id="i2" type="radio" name="q8" value="No"> </label>
 							</div>
 								<div data-view-conditions="name1:1">
 								<p>Is the data confidential?  </p>
-								<label> Yes <input id="i3" type="radio" name="name2" value="3"> No <input id="14" type="radio" name="name2" value="4"> </label>
+								<label> Yes <input id="i3" type="radio" name="q8a" value="3"/> No <input id="14" type="radio" name="name2" value="4"/> </label>
 								</div>
 								<div data-view-conditions="name1:1">
-								<p>Is the data sensitive? </p>
-								<label> Yes <input id="i3" type="radio" name="name3" value="3"> No <input id="14" type="radio" name="name3" value="4"> </label>
+									<p>Is the data sensitive? </p>
+									<label> Yes <input id="i3" type="radio" name="q8b" value="3"> No <input id="14" type="radio" name="name3" value="4"></label>
 								</div>
 								<div data-view-conditions="name1:1">
 								<p>Is the data personally identified information?</p>
-								<label> Yes <input id="i3" type="radio" name="name4" value="3"> No <input id="14" type="radio" name="name4" value="4"> </label>
+								<label> Yes <input id="i3" type="radio" name="q8c" value="3"> No <input id="14" type="radio" name="name4" value="4"> </label>
 								</div>							
 							</div>
 						</div>

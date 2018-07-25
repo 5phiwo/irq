@@ -10,8 +10,9 @@
 		$email = $_SESSION['email'];
 	}
 	
-	if(isset($_POST['finish']))
+	if(isset($_POST['next']))
 	{
+		$_SESSION['questions']['q13'] = $_POST['q13'];
 		header("Location: preview.php");
 	}
 ?>
@@ -27,18 +28,21 @@
 							</div>
 							</br>
 							<div class="">
-								<div><label><input type="radio" name="third_party"> Yes <input type="radio" name="third_party"> No</label></div>
+								<div>
+									<label><input type="radio" name="q13"> Yes <input type="radio" name="q13"> No</label>
+								</div>
 							</div>
 						</div>
 						<div class="col-lg-12">
 						<div class="col-lg-6 col-lg-offset-3 text-center">
-						<div style="margin-top:60px;">
-							<div class="grp-input">
-							<input type="submit" name="next" value="Submit & Review" class="btn btn-primary">
-								</br> </br> </br> </br>
-								<a href="q12.php" >Previous</a>
-								</br></br></br></br>
-								<h6>Question 13 of 13</h6>
+							<div style="margin-top:60px;">
+								<div class="grp-input">
+									<input type="submit" name="next" value="Submit & Review" class="btn btn-primary">
+									</br> </br> </br> </br>
+									<a href="q12.php" >Previous</a>
+									</br></br></br></br>
+									<h6>Question 13 of 13</h6>
+								</div>
 							</div>
 						</div>
 					</form>

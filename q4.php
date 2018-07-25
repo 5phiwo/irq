@@ -12,6 +12,8 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q4'] = $_POST['q4'];
+		
 		header("Location: q5.php");
 	}
 ?>
@@ -29,13 +31,13 @@
 								<label>4. What is the estimated total value (in ZAR) of the engagement?</label>
 							</div>
 							<div class="">
-								<input type="text" name="product_desc" class="form-control">
+								<input type="text" name="q4" class="form-control">
 							</div>
 						</div>
 						<div class="col-lg-6 col-lg-offset-3 text-center">
 						<div style="margin-top:60px;">
 							<div class="grp-input">
-							<input type="submit" name="next" value="Next" class="btn btn-primary">
+								<input type="submit" name="next" value="Next" class="btn btn-primary">
 								</br> </br> </br> </br>
 								<a href="q3.php" >Previous</a>
 								</br></br></br></br>

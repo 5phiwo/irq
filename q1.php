@@ -12,6 +12,8 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q1'] = $_POST['q1'];
+		
 		header("Location: q2.php");
 	}
 ?>
@@ -35,7 +37,7 @@
 								<label>1. Please describe the product / service required from the third party.</label>
 							</div>
 							<div class="">
-								<textarea name="product_desc" class="form-control"style="height: 100px;"></textarea>
+								<textarea name="q1" class="form-control"style="height: 100px;"></textarea>
 							</div>
 						</div>
 					<div class="col-lg-6 col-lg-offset-3 text-center">

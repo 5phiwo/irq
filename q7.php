@@ -11,6 +11,10 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q7'] = $_POST['q7'];
+		$_SESSION['answers']['q7']['sub']['q7a'] = $_POST['q7a'];
+		$_SESSION['answers']['q7']['sub']['q7b'] = $_POST['q7b'];
+		
 		header("Location: q8.php");
 	}
 ?>
@@ -88,17 +92,17 @@
 							</div>
 							<div class="">
 								<div>
-								<label> Yes <input id="i1" type="radio" name="name1" value="1"> </label>
-								<label> No <input id="i2" type="radio" name="name1" value="2"> </label>
+								<label> Yes <input id="i1" type="radio" name="q7" value="Yes"> </label>
+								<label> No <input id="i2" type="radio" name="q7" value="No"> </label>
 								</div>
 								</br>
 								<div data-view-conditions="name1:2">
     								<label>7A. Is there any possibility that as part of the product / service provided to the organisation the third party may use sub-contractors? </label>
-      								<label> Yes <input id="i3" type="radio" name="name2" value="3"> No <input id="14" type="radio" name="name2" value="4"> </label>
+      								<label> Yes <input id="i3" type="radio" name="q7a" value="Yes"> No <input id="14" type="radio" name="q7a" value="No"> </label>
       							</div>
 								<div data-view-conditions="name1:1">
     								<label>7A. Would the product / service provided to the organisation be sub-contracted to third parties (whether on-shore or off-shore)?  </label>
-      								<label> Yes <input id="i3" type="radio" name="name3" value="3"> No <input id="14" type="radio" name="name3" value="4"> </label>
+      								<label> Yes <input id="i3" type="radio" name="q7b" value="Yes"> No <input id="14" type="radio" name="q7b" value="4"> </label>
       							</div>
 								</div>
 								</div>

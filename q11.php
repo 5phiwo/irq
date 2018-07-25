@@ -12,6 +12,7 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q11'] = $_POST['q11'];
 		header("Location: q12.php");
 	}
 ?>
@@ -26,7 +27,7 @@
 								<label>11. Please select the main location(s) from which the third party provides the goods or delivers the services as part of the contract with the organisation.</label>
 							</div>
 							<div class="">
-								<select  class="form-control">
+								<select name="q11" class="form-control">
                                     <option>Afghanistan</option>
                                     <option>Albania</option>
                                     <option>Algeria</option>

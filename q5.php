@@ -12,12 +12,11 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q5'] = $_POST['q5'];
+		
 		header("Location: q6.php");
 	}
 	
-?>
-<?php
-
 ?>
 <?Php require_once("inc/templates/header.php"); ?>
 	<div class="row">
@@ -30,7 +29,7 @@
 								<label>5. What is the estimated duration of this engagement?</label>
 							</div>
 							<div class="">
-								<input type="text" name="est_duration" class="form-control">
+								<input type="text" name="q5" class="form-control">
 							</div>
 						</div>
 						<div class="col-lg-6 col-lg-offset-3 text-center">

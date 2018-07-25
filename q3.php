@@ -12,6 +12,7 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q3'] = $_POST['q3'];
 		header("Location: q4.php");
 	}
 ?>
@@ -26,7 +27,7 @@
 								<label>3. What is the Business unit/ function of the requester?</label>
 							</div>
 							<div class="">
-							<input type="text" name="product_desc" class="form-control">
+								<input type="text" name="q3" class="form-control">
 							</div>
 						</div>
 						<div class="col-lg-6 col-lg-offset-3 text-center">

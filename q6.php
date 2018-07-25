@@ -12,6 +12,8 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q6'] = $_POST['q6'];
+		
 		header("Location: q7.php");
 	}
 ?>
@@ -26,7 +28,7 @@
 								<label>6. Will the provision of the goods / services by the third party meet the definition of a Critical and/or Material Outsourcing relationship?</label>
 							</div>
 							<div class="">
-								<select name= "criticality"select class="form-control">
+								<select name= "q6"select class="form-control">
 									<option value="0">Select</option>
 									<option value="">Critical and/or material</option>
 									<option value="">None</option>
@@ -36,7 +38,7 @@
 						<div class="col-lg-6 col-lg-offset-3 text-center">
 						<div style="margin-top:60px;">
 							<div class="grp-input">
-							<input type="submit" name="next" value="Next" class="btn btn-primary">
+								<input type="submit" name="next" value="Next" class="btn btn-primary">
 								</br> </br> </br> </br>
 								<a href="q5.php" >Previous</a>
 								</br></br></br></br>

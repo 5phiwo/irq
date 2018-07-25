@@ -11,6 +11,11 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q10'] = $_POST['q10'];
+		$_SESSION['answers']['q10']['sub']['q10a'] = $_POST['q10a'];
+		$_SESSION['answers']['q10']['sub']['q10b'] = $_POST['q10b'];
+		$_SESSION['answers']['q10']['sub']['q10c'] = $_POST['q10c'];
+		
 		header("Location: q11.php");
 	}
 ?>
@@ -29,7 +34,7 @@
       views.each(function(){
         var view = $(this);
         var conditions = view.attr('data-view-conditions').split(',');
-        var display = true;
+        var display = trdue;
         
         // Loop over all required conditions to be met.
         for(var i = 0; i < conditions.length; i++){
@@ -89,23 +94,23 @@
 							</div>
 							<div class="">
 							<div>
-								<label> Yes <input id="i1" type="radio" name="name1" value="1"> </label>
-								<label> No <input id="i2" type="radio" name="name1" value="2"> </label>
+								<label> Yes <input id="i1" type="radio" name="q10" value="1"> </label>
+								<label> No <input id="i2" type="radio" name="q10" value="2"> </label>
 							</div>
 							</br>
 								<div data-view-conditions="name1:1">
 								<label>10A. Is the product or service difficult to source and is only available from one or few providers?  </label>
-								<label> Yes <input id="i3" type="radio" name="name2" value="3"> No <input id="14" type="radio" name="name2" value="4"> </label>
+								<label> Yes <input id="i3" type="radio" name="q10a" value="3"> No <input id="14" type="radio" name="name2" value="4"> </label>
 							</div>
 							</br>
 								<div data-view-conditions="name1:1">
 								<label>10B. If the product or service were to fail, would the organisation still be able to meet its regulatory obligations?</p>
-								<label> Yes <input id="i3" type="radio" name="name3" value="3"> No <input id="14" type="radio" name="name3" value="4"> </label>
+								<label> Yes <input id="i3" type="radio" name="q10b" value="3"> No <input id="14" type="radio" name="name3" value="4"> </label>
 							</div>
 							</br>
 								<div data-view-conditions="name1:1">
 								<label>10C. Would the failure of the product or service impact the the organisation' financial performance?</label>
-								<label> Yes <input id="i3" type="radio" name="name4" value="3"> No <input id="14" type="radio" name="name4" value="4"> </label>
+								<label> Yes <input id="i3" type="radio" name="q10c" value="3"> No <input id="14" type="radio" name="name4" value="4"> </label>
 							</div>
 						<div class="col-lg-6 col-lg-offset-3 text-center">
 						<div style="margin-top:60px;">

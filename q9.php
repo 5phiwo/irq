@@ -16,6 +16,7 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q9'] = $_POST['q9'];
 		header("Location: q10.php");
 	}
 ?>
@@ -31,7 +32,7 @@
 							</div>
 							</br>
 							<div class="">
-								<div><label><input type="radio" name="third_party"> Yes <input type="radio" name="third_party"> No</label></div>
+								<div><label><input type="radio" name="q9"> Yes <input type="radio" name="q9"> No</label></div>
 							</div>
 						</div>
 						<div class="col-lg-6 col-lg-offset-3 text-center">

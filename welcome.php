@@ -12,6 +12,8 @@
 	
 	if(isset($_SESSION['email']))
 	{
+		$_SESSION['answers'] = "";
+		
 		$email = $_SESSION['email'];
 		
 		$sql = "select * from user where(email = '$email')";

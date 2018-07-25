@@ -12,18 +12,20 @@
 	
 	if(isset($_POST['next']))
 	{
+		$_SESSION['answers']['q2'] = $_POST['q2'];
+		
 		header("Location: q3.php");
 	}
 
 	if(empty($_POST['category']))
-{
-    $category_error = "Please select a cake size";
-    $error=true;
-}
-else
-{
-    $selected_cake = $_POST['selectedcake'];
-}
+	{
+		$category_error = "Please select a cake size";
+		$error=true;
+	}
+	else
+	{
+		$selected_cake = $_POST['selectedcake'];
+	}
 	
 ?>
 <?php
@@ -50,7 +52,7 @@ else
 								<label>2. Please select the spend category.</label>
 							</div>
 							<div class="">
-								<select name="category" class="form-control">
+								<select name="q2" class="form-control">
 									<option value="">Select category</option>
 									<option value="1">Apparel and Luggage and Personal Care Products</option>
 									<option value="2">Building and Construction Machinery and Accessories</option>
